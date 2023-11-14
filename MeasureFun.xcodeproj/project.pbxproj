@@ -12,6 +12,9 @@
 		58C029E02B027C7A00A631BE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C029DF2B027C7A00A631BE /* Item.swift */; };
 		58C029E22B027C7B00A631BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58C029E12B027C7B00A631BE /* Assets.xcassets */; };
 		58C029E52B027C7B00A631BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58C029E42B027C7B00A631BE /* Preview Assets.xcassets */; };
+		58C02A062B02882D00A631BE /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C02A052B02882D00A631BE /* CustomARView.swift */; };
+		58C02A082B028AAE00A631BE /* ARContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C02A072B028AAE00A631BE /* ARContainerView.swift */; };
+		58C02A0B2B02AA0C00A631BE /* chair_swan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 58C02A0A2B02AA0C00A631BE /* chair_swan.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,10 @@
 		58C029DF2B027C7A00A631BE /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		58C029E12B027C7B00A631BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58C029E42B027C7B00A631BE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		58C02A052B02882D00A631BE /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
+		58C02A072B028AAE00A631BE /* ARContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARContainerView.swift; sourceTree = "<group>"; };
+		58C02A092B028BEB00A631BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		58C02A0A2B02AA0C00A631BE /* chair_swan.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = chair_swan.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,11 +60,15 @@
 		58C029DA2B027C7A00A631BE /* MeasureFun */ = {
 			isa = PBXGroup;
 			children = (
+				58C02A092B028BEB00A631BE /* Info.plist */,
 				58C029DB2B027C7A00A631BE /* MeasureFunApp.swift */,
 				58C029DD2B027C7A00A631BE /* ContentView.swift */,
+				58C02A052B02882D00A631BE /* CustomARView.swift */,
 				58C029DF2B027C7A00A631BE /* Item.swift */,
 				58C029E12B027C7B00A631BE /* Assets.xcassets */,
 				58C029E32B027C7B00A631BE /* Preview Content */,
+				58C02A072B028AAE00A631BE /* ARContainerView.swift */,
+				58C02A0A2B02AA0C00A631BE /* chair_swan.usdz */,
 			);
 			path = MeasureFun;
 			sourceTree = "<group>";
@@ -128,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58C02A0B2B02AA0C00A631BE /* chair_swan.usdz in Resources */,
 				58C029E52B027C7B00A631BE /* Preview Assets.xcassets in Resources */,
 				58C029E22B027C7B00A631BE /* Assets.xcassets in Resources */,
 			);
@@ -140,8 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58C02A082B028AAE00A631BE /* ARContainerView.swift in Sources */,
 				58C029DE2B027C7A00A631BE /* ContentView.swift in Sources */,
 				58C029E02B027C7A00A631BE /* Item.swift in Sources */,
+				58C02A062B02882D00A631BE /* CustomARView.swift in Sources */,
 				58C029DC2B027C7A00A631BE /* MeasureFunApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +293,8 @@
 				DEVELOPMENT_TEAM = 27J9MHRH2K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MeasureFun/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Needed to see camera view";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -308,6 +324,8 @@
 				DEVELOPMENT_TEAM = 27J9MHRH2K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MeasureFun/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Needed to see camera view";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
