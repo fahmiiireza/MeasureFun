@@ -8,11 +8,13 @@
 import ARKit
 import RealityKit
 import SwiftUI
+import Combine
+
 class CustomARView: ARView {
     required init(frame frameRect: CGRect) {
         super.init(frame: frameRect)
     }
-
+    
     dynamic required init?(coder decoder: NSCoder) {
         fatalError("Dynamic init coder has not been implemented")
     }
@@ -24,11 +26,20 @@ class CustomARView: ARView {
     @objc func handleButtonTap() {
         placeItem()
     }
-
+    
     func placeItem() {
-        let chair = try? Entity.load(named: "chair_swan")
+        let item = try? Entity.load(named: "sneaker_airforce")
         let anchor = AnchorEntity(plane: .horizontal)
-        anchor.addChild(chair!)
+        anchor.addChild(item!)
         scene.addAnchor(anchor)
+        
+//        calculate distance from the first item to the second
+        if scene.anchors.count == 2 {
+            let distance = simd_precise_distance(scene.anchors[0].position, scene.anchors[1].position)
+            ARManager.shared.actionStream.send(.showDistance(distance: String(format: "%.2f", distance * 100.0) + " cm"))
+//            distanceLabel = Text("Distance: \(String(format: "%.2f", distance)) meters")
+            print(String(distance))
+
+        }
     }
 }
