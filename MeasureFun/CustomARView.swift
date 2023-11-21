@@ -28,7 +28,7 @@ class CustomARView: ARView {
     }
     
     func placeItem() {
-        let item = try? Entity.load(named: "sneaker_airforce")
+        let item = try? Entity.load(named: "snowman")
         let anchor = AnchorEntity(plane: .horizontal)
         anchor.addChild(item!)
         scene.addAnchor(anchor)
