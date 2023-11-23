@@ -7,24 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5805E0E02B0E57CE00849F21 /* snowman.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5805E0DF2B0E57CE00849F21 /* snowman.usdz */; };
 		5868C5BE2B06606800A72195 /* ARAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868C5BD2B06606800A72195 /* ARAction.swift */; };
 		5868C5C02B06623600A72195 /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5868C5BF2B06623500A72195 /* ARManager.swift */; };
-		588494662B0BE2F500CBC501 /* snowman.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 588494652B0BE2F500CBC501 /* snowman.usdz */; };
-		58B53C5E2B05063F0086708F /* sneaker_airforce.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 58B53C5D2B05063F0086708F /* sneaker_airforce.usdz */; };
 		58C029DC2B027C7A00A631BE /* MeasureFunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C029DB2B027C7A00A631BE /* MeasureFunApp.swift */; };
 		58C029DE2B027C7A00A631BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C029DD2B027C7A00A631BE /* ContentView.swift */; };
 		58C029E22B027C7B00A631BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58C029E12B027C7B00A631BE /* Assets.xcassets */; };
 		58C029E52B027C7B00A631BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58C029E42B027C7B00A631BE /* Preview Assets.xcassets */; };
 		58C02A062B02882D00A631BE /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C02A052B02882D00A631BE /* CustomARView.swift */; };
 		58C02A082B028AAE00A631BE /* ARContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C02A072B028AAE00A631BE /* ARContainerView.swift */; };
-		58C02A0B2B02AA0C00A631BE /* chair_swan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 58C02A0A2B02AA0C00A631BE /* chair_swan.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5805E0DF2B0E57CE00849F21 /* snowman.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = snowman.usdz; sourceTree = "<group>"; };
 		5868C5BD2B06606800A72195 /* ARAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAction.swift; sourceTree = "<group>"; };
 		5868C5BF2B06623500A72195 /* ARManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManager.swift; sourceTree = "<group>"; };
-		588494652B0BE2F500CBC501 /* snowman.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = snowman.usdz; path = ../../../Downloads/snowman.usdz; sourceTree = "<group>"; };
-		58B53C5D2B05063F0086708F /* sneaker_airforce.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = sneaker_airforce.usdz; sourceTree = "<group>"; };
 		58C029D82B027C7A00A631BE /* MeasureFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeasureFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58C029DB2B027C7A00A631BE /* MeasureFunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureFunApp.swift; sourceTree = "<group>"; };
 		58C029DD2B027C7A00A631BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,7 +30,6 @@
 		58C02A052B02882D00A631BE /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
 		58C02A072B028AAE00A631BE /* ARContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARContainerView.swift; sourceTree = "<group>"; };
 		58C02A092B028BEB00A631BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		58C02A0A2B02AA0C00A631BE /* chair_swan.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = chair_swan.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +71,7 @@
 				58C029E12B027C7B00A631BE /* Assets.xcassets */,
 				58C029E32B027C7B00A631BE /* Preview Content */,
 				58C02A072B028AAE00A631BE /* ARContainerView.swift */,
-				58C02A0A2B02AA0C00A631BE /* chair_swan.usdz */,
-				58B53C5D2B05063F0086708F /* sneaker_airforce.usdz */,
-				588494652B0BE2F500CBC501 /* snowman.usdz */,
+				5805E0DF2B0E57CE00849F21 /* snowman.usdz */,
 			);
 			path = MeasureFun;
 			sourceTree = "<group>";
@@ -148,11 +142,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58B53C5E2B05063F0086708F /* sneaker_airforce.usdz in Resources */,
-				588494662B0BE2F500CBC501 /* snowman.usdz in Resources */,
-				58C02A0B2B02AA0C00A631BE /* chair_swan.usdz in Resources */,
 				58C029E52B027C7B00A631BE /* Preview Assets.xcassets in Resources */,
 				58C029E22B027C7B00A631BE /* Assets.xcassets in Resources */,
+				5805E0E02B0E57CE00849F21 /* snowman.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

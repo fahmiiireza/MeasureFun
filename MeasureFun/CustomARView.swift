@@ -29,6 +29,7 @@ class CustomARView: ARView {
     
     func placeItem() {
         let item = try? Entity.load(named: "snowman")
+        
         let anchor = AnchorEntity(plane: .horizontal)
         anchor.addChild(item!)
         scene.addAnchor(anchor)
@@ -38,7 +39,6 @@ class CustomARView: ARView {
             let distance = simd_precise_distance(scene.anchors[0].position, scene.anchors[1].position)
             ARManager.shared.actionStream.send(.showDistance(distance: String(format: "%.2f", distance * 100.0) + " cm"))
 //            distanceLabel = Text("Distance: \(String(format: "%.2f", distance)) meters")
-            print(String(distance))
 
         }
     }
