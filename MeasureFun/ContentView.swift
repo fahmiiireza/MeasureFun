@@ -37,28 +37,51 @@ struct ContentView: View {
 
                     Spacer() // Push the button to the bottom
 
-                    // Button for placing AR items
-                    Button("Place Item") {
-                        if distance == "" {
-                            // Notify ARManager to place an item
-                            NotificationCenter.default.post(name: Notification.Name("placeItemNotification"), object: nil)
-                            // Use VoiceOver to announce item placement
-                            UIAccessibility.post(notification: .announcement, argument: "Item Placed")
-                            buttonTouched.toggle()
-                        } else {
-                            // Show an alert if trying to place more than two items
-                            showingAlert = true
+                    HStack {
+                        
+                        // Button for placing AR items
+                        Button("Place Item") {
+                            if distance == "" {
+                                // Notify ARManager to place an item
+                                NotificationCenter.default.post(name: Notification.Name("placeItemNotification"), object: nil)
+                                // Use VoiceOver to announce item placement
+                                UIAccessibility.post(notification: .announcement, argument: "Item Placed")
+                                buttonTouched.toggle()
+                            } else {
+                                // Show an alert if trying to place more than two items
+                                showingAlert = true
+                            }
+                        }
+                        .alert("Cannot put more than two items", isPresented: $showingAlert) {
+                            Button("OK", role: .cancel) { }
+                        }
+                        .font(.title)
+                        .bold()
+                        .accessibilityHint("Place the item in the middle of the screen")
+                        .sensoryFeedback(.success, trigger: buttonTouched)
+                        .sensoryFeedback(.error, trigger: showingAlert)
+                        .buttonStyle(GrowingButton())
+                        
+                        Button {
+                            // Placeholder: take a snapshot
+                            ARVariables.arView.snapshot(saveToHDR: false) { (image) in
+                                // Compress the image
+                                let compressedImage = UIImage(
+                                    data: (image?.pngData())!)
+                                // Save in the photo album
+                                UIImageWriteToSavedPhotosAlbum(
+                                    compressedImage!, nil, nil, nil)
+                            }
+                            
+                        } label: {
+                            Image(systemName: "camera")
+                                .frame(width:60, height:60)
+                                .font(.title)
+                                .background(.white.opacity(0.75))
+                                .cornerRadius(30)
+                                .padding()
                         }
                     }
-                    .alert("Cannot put more than two items", isPresented: $showingAlert) {
-                        Button("OK", role: .cancel) { }
-                    }
-                    .font(.title)
-                    .bold()
-                    .accessibilityHint("Place the item in the middle of the screen")
-                    .sensoryFeedback(.success, trigger: buttonTouched)
-                    .sensoryFeedback(.error, trigger: showingAlert)
-                    .buttonStyle(GrowingButton())
                 }
 
                 // Indicator circle for guiding user actions

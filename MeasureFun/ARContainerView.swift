@@ -9,14 +9,20 @@ import SwiftUI
 import RealityKit
 import SwiftUI
 
+struct ARVariables{
+    static var arView: CustomARView!
+}
+
 struct ARContainerView: UIViewRepresentable {
     func makeUIView(context: Context) -> CustomARView {
-        let arView = CustomARView()
+//        let arView = CustomARView()
 
+        ARVariables.arView = CustomARView()
+        
         // Observe notification for button tap
-        NotificationCenter.default.addObserver(arView, selector: #selector(arView.handleButtonTap), name: Notification.Name("placeItemNotification"), object: nil)
+        NotificationCenter.default.addObserver(ARVariables.arView!, selector: #selector(ARVariables.arView.handleButtonTap), name: Notification.Name("placeItemNotification"), object: nil)
 
-        return arView
+        return ARVariables.arView
     }
 
     func updateUIView(_ uiView: CustomARView, context: Context) {
